@@ -1,28 +1,23 @@
 import './App.css';
 import Card from "./Card"
-import 'leaflet/dist/leaflet.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, Marker, ZoomControl } from "pigeon-maps"
+
 
 
 function App() {
-  const position = [51.505, -0.09]
+  
   return (
     <>  
       <div className="background-pattern"></div>
       
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-             A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
+      <div className="leaflet-container">
+        <Map defaultCenter={[50.879, 4.6997]} defaultZoom={13}>
+          <Marker width={50} anchor={[50.879, 4.6997]} />
+          <ZoomControl />
+        </Map>
+      </div>
       
       <div className="container">
         <header className="header">

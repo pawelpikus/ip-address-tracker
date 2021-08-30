@@ -1,5 +1,5 @@
 .card{
-    
+    z-index: 2;
     background-color: #fff;
     color: hsl(0, 0%, 17%);
     padding: 1.5em 4em;
