@@ -1,0 +1,26 @@
+.card{
+    
+    background-color: #fff;
+    color: hsl(0, 0%, 17%);
+    padding: 1.5em 5em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.label{
+    font-size: .625rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: hsl(0, 0%, 59%);
+    margin-bottom: .5em;
+}
+
+.data{
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.data:last-child{
+    margin-bottom: 0;
+}
