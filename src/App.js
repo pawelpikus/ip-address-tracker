@@ -36,6 +36,7 @@ function App() {
   
   useEffect(() => {
     getInitialLocation()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   const getLocation = async (e) =>{
