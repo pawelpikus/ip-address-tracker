@@ -44,7 +44,7 @@ In order for this to work properly you need to provide an API key from <link>ipi
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/)   
-- [Pigeaon Map API](https://pigeon-maps.js.org/) - ReactJS maps without external dependencies
+- [Pigeon Map API](https://pigeon-maps.js.org/) - ReactJS maps without external dependencies
 - [ipify API](https://www.ipify.org/) - A Simple Public IP Address API
 - [Font Awsome](https://fontawesome.com/) - the web's most popular icon set and toolkit
 
