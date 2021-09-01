@@ -29,13 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/screenshot.PNG)
+![](./src/images/screenshot.PNG)
 
 ### Links
 
 In order for this to work properly you need to provide an API key from <link>ipify.com</link> and put it into the <code>API_KEY</code> variable in <code>App.js</code>. The registration on ipify.com is free of charge for up to 1,000 API calls.
 
-- Solution URL: [Add solution URL here](https://github.com/pawelpikus/ip-address-tracker)
+- Solution URL: [github](https://github.com/pawelpikus/ip-address-tracker)
 
 ## My process
 
