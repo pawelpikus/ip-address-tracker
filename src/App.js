@@ -7,10 +7,24 @@ import { Map, Marker } from "pigeon-maps"
 
 function App() {
   
+  let serverURL;
+  try{
+    fetch("./.netlify/functions/api")
+      .then(response => response.json())
+      .then(json => {
+        serverURL = json.api;
+        
+  })
+
+  } catch(err){
+    console.log(err)
+}
+  
+
   const ValidIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]).){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
   const ValidDomainNameRegex = "(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]"
 
-  const API_KEY = process.env.IPIFY_KEY //paste your API KEY from Apify.com here
+  const API_KEY = serverURL //paste your API KEY from Apify.com here
   const [query, setQuery] = useState("")
   const [ipData, setIpData] = useState()
   const [center, setCenter] = useState([50, 23])
