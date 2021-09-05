@@ -23,7 +23,7 @@ function App() {
   const getInitialLocation = async () =>{
 
     try{
-      const response = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}`)
+      const response = await fetch(`./functions/fetch-location/fetch-location`)
       const initialLocationData = await response.json()
       setIpData(initialLocationData)
       setCenter([initialLocationData.location.lat, initialLocationData.location.lng])
