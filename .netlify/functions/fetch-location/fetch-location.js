@@ -11,8 +11,8 @@ const handler = async function (event) {
 
   // TODO: customize your URL and API keys set in the Netlify Dashboard
   // this is secret too, your frontend won't see this
-  const { API_TOKEN } = process.env
-  const URL = `https://geo.ipify.org/api/v1?apiKey=${API_TOKEN}`
+  const { API_TOKEN, API_URL } = process.env
+  const URL = `${API_URL}${API_TOKEN}`
 
   console.log('Constructed URL is ...', URL)
 

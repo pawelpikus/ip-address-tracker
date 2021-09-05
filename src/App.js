@@ -10,7 +10,6 @@ function App() {
   const ValidIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]).){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
   const ValidDomainNameRegex = "(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]"
 
-  const API_KEY = process.env.REACT_APP_IPIFY_KEY//paste your API KEY from Apify.com here
   const [query, setQuery] = useState("")
   const [ipData, setIpData] = useState()
   const [center, setCenter] = useState([50, 23])
@@ -23,7 +22,7 @@ function App() {
   const getInitialLocation = async () =>{
 
     try{
-      const response = await fetch(`./functions/fetch-location/fetch-location`)
+      const response = await fetch(`./.netlify/functions/fetch-location`)
       const initialLocationData = await response.json()
       setIpData(initialLocationData)
       setCenter([initialLocationData.location.lat, initialLocationData.location.lng])
@@ -42,12 +41,12 @@ function App() {
   const getLocation = async (e) =>{
     e.preventDefault()
     try{
-      const response = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${!isDomainName(query)?query: ''}&domain=${isDomainName(query)? query: ''}`)
-    const locationData = await response.json()
-    setIpData(locationData)
-    setQuery('')
-    setCenter([locationData.location.lat, locationData.location.lng]) 
-    
+      const response = await fetch(`./.netlify/functions/fetch-location&ipAddress=${!isDomainName(query)?query: ''}&domain=${isDomainName(query)? query: ''}`)
+      const locationData = await response.json()
+      setIpData(locationData)
+      setQuery('')
+      setCenter([locationData.location.lat, locationData.location.lng]) 
+      
     } catch(err){
       console.log(err)
     }

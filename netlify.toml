@@ -1,2 +1,2 @@
 [build]
-functions = 'functions/fetch-location/'
+functions = '/.netlify/functions/'
