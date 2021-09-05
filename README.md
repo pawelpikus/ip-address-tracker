@@ -50,7 +50,7 @@ In order for this to work properly you need to provide an API key from <link>ipi
 
 ### What I learned
 
-I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to validate the input value with <code>pattern</code> attribute but the regex I found on Stack Overflow doesn't seem to do a trick, at least for the domain names. 
+I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to validate the input value with <code>pattern</code> attribute but the regex I found on Stack Overflow doesn't seem to do the trick, at least for the domain names. 
 
 ### Continued development
 
