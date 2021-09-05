@@ -19,29 +19,26 @@ function App() {
     return RegExp(/^\p{L}/,'u').test(str)
   }
 
-  const getInitialLocation = async () =>{
-
-    try{
-      const response = await fetch(`./.netlify/functions/fetch-location`)
-      const initialLocationData = await response.json()
-      setIpData(initialLocationData)
-      setCenter([initialLocationData.location.lat, initialLocationData.location.lng])
-      
-    } catch(err){
-      console.log(err)
-    }
-  }
-  
   useEffect(() => {
-    
-    getInitialLocation()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    const getInitialLocation = async () =>{
+      try{
+        const response = await fetch(`/.netlify/functions/fetch-location?ipAddress=&domain=`)
+        const initialLocationData = await response.json()
+        setIpData(initialLocationData)
+        setCenter([initialLocationData.location.lat, initialLocationData.location.lng])
+        
+      } catch(err){
+        console.log(err)
+      }
+    }
+    getInitialLocation();
   }, [])
   
   const getLocation = async (e) =>{
     e.preventDefault()
+    
     try{
-      const response = await fetch(`./.netlify/functions/fetch-location&ipAddress=${!isDomainName(query)?query: ''}&domain=${isDomainName(query)? query: ''}`)
+      const response = await fetch(`/.netlify/functions/fetch-location?ipAddress=${!isDomainName(query)?query : ''}&domain=${isDomainName(query)? query : ''}`)
       const locationData = await response.json()
       setIpData(locationData)
       setQuery('')
