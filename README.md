@@ -74,10 +74,6 @@ I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to
 
 
 I used Netlify Functions to hide the API token on Netlify servers, i.e.: 
-
-I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to validate the input value with <code>pattern</code> attribute but the regex I found on Stack Overflow doesn't seem to do the trick, at least for the domain names. 
-
-
  - I used the default function builder template called `token-hider` by running `netlify functions:create` command.
  - Learnt how o pass the queryStringParameters to build the URL.
  - Adjusted the template to query the api for the project.
