@@ -72,7 +72,11 @@ In order for the project to work properly you need to create a free account for 
 ### What I learned
 I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to validate the input value with <code>pattern</code> attribute but the regex I found on Stack Overflow doesn't seem to do a trick, at least for the domain names.
 
+<<<<<<< HEAD
 I used Netlify Functions to hide the API token on Netlify servers, i.e.: 
+=======
+I've practiced the use of Hooks (useState, useEffect) and calling APIs. Tried to validate the input value with <code>pattern</code> attribute but the regex I found on Stack Overflow doesn't seem to do the trick, at least for the domain names. 
+>>>>>>> 2374b4fa7966e4c34cbf393d1d52911bf17503ad
 
  - I used the default function builder template called `token-hider` by running `netlify functions:create` command.
  - Learnt how o pass the queryStringParameters to build the URL.
